@@ -1,0 +1,337 @@
+/* #########
+    base stuff
+   ######### */
+
+:root {
+    --bg-color: #FAFAFA;
+    --bg-color-dark: #F0F0F0;
+    --dark-purple: #900090;
+
+    scrollbar-track-color: transparent;
+    scrollbar-width: none;
+
+    font-size: 20px;
+}
+
+body {
+    background-color: var(--bg-color);
+
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 0.4rem;
+}
+
+p strong {
+    font-weight: 700;
+}
+
+.descriptor {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+
+    margin-bottom: 0.4rem;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+/* #########
+    middle-large things
+   ######### */
+
+.ml {
+    width: 100%;
+    text-align: center;
+
+    position: fixed;
+    top: 50%;
+    
+    transform: translate(0, -50%);
+}
+
+.ml-text-primary {
+    font-family: 'Raleway', sans-serif;
+    font-size: 80px;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.ml-text-primary.page-header {
+    margin: 0;
+    padding: 0;
+}
+
+.ml-text-secondary {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+a.ml-away {
+    color: var(--dark-purple);
+}
+
+/* ##########
+    main content 
+   ########## */
+
+main {
+    width: 100%;
+}
+
+main.content {
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+main.ml-content {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+}
+
+main.show {
+    opacity: 1;
+}
+
+/* ##########
+   ##########
+    ABOUT PAGE
+   ##########
+   ########## */
+
+/* ##########
+    different sections
+   ########## */
+
+.section {
+    overflow: hidden;
+}
+
+.section:nth-child(odd) {
+    background-color: var(--bg-color-dark);
+}
+
+.container {
+    margin: 0 15%;
+}
+
+.container-single {
+    margin: 0 25%;
+    padding: 1rem 0;
+
+    text-align: center;
+}
+
+.column {
+    padding: 3rem 0;
+}
+
+.container-double .column {
+    width: 40%;
+
+    text-align: center;
+}
+
+.container-double .column:first-child {
+    float: left;
+    text-align: right;
+}
+
+.container-double .column:last-child {
+    float: right;
+    text-align: left;
+}
+
+.column .column-link {
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    color: var(--dark-purple);
+}
+
+.group {
+    margin-bottom: 1rem;
+}
+
+/* ##########
+    icon stuff
+   ########## */
+
+.column.icon-row-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-row {
+    display: flex;
+    justify-content: left;
+}
+
+.icon-row .icon-large {
+    padding: 0.5rem;
+
+    text-align: center;
+}
+
+.icon-row .icon-large:first-child {
+    padding-left: 0;
+}
+
+.icon-large .icon-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    margin-top: 0.5rem;
+}
+
+/* ##########
+   ##########
+    PROJECTS PAGE
+   ##########
+   ########## */
+
+/* #########
+    cards
+   ######### */
+
+.card-container {
+    padding: 1rem 15%;
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-holder {
+    padding: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 200px;
+    background-size: 200px 200px;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+
+    border-radius: 10px;
+
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    width: 220px;
+    height: 220px;
+
+    margin: -10px;
+
+    background-size: 220px 220px;
+}
+
+.card-content {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.card-title {
+    margin: 15%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    color: white;
+    font-family: "Roboto Slab", sans-serif;
+    text-align: right;
+}
+
+.project-img {
+    box-shadow: 0 0 5px #000;
+}
+
+.project-icon-link {
+    vertical-align: top;
+}
+
+/* ##########
+   ##########
+    BLOG PAGE
+   ##########
+   ########## */
+
+.blog-container {
+    display: flex;
+    width: 100%;
+}
+
+.blog-content {
+    flex: 4;
+
+    padding: 2rem 5rem;
+}
+
+.blog-sidebar {
+    flex: 1;
+    border-left: 2px solid var(--bg-color-dark);
+
+    padding: 2rem 2rem;
+}
+
+
+/* #########
+    footer
+   ######### */
+
+footer {
+    width: 100%;
+    border-top: 2px solid var(--bg-color-dark);
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 5rem;
+}
+
+.footer-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-right: auto;
+}
+
+.footer-links-container {
+    display: flex;
+}
+
+.footer-link img {
+    margin: 0.5rem;
+    vertical-align: middle;
+}
