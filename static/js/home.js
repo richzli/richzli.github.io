@@ -20,7 +20,7 @@ function displayWheel(e){
     if (!inprogress) {
         var evt = window.event || e; // equalize event object
         var delta = evt.detail ? evt.detail*(-120) : evt.wheelDelta; // check for detail first so Opera uses that instead of wheelDelta
-        delta = Math.floor(delta/abs(delta));
+        delta = Math.floor(delta/Math.abs(delta));
         
         inprogress = true;
         updateIndex(delta);
