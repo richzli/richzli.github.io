@@ -45,27 +45,31 @@ if (document.attachEvent) { // if IE (and Opera depending on user setting)
 
 var xi = null;
 var yi = null;
+var currswipe = false;
 
 function handleTouchStart(evt) {
     evt.preventDefault();
     xi = evt.touches[0].clientX;
     yi = evt.touches[0].clientY;
-    console.log([xi, yi]);
 }
 
 function handleTouchMove(evt) {
     evt.preventDefault();
-    if (!inprogress && xi && yi) {
+    if (!currswipe && !inprogress && xi && yi) {
         var dx = evt.touches[0].clientX - xi;
         var dy = evt.touches[0].clientY - yi;
 
         if (Math.abs(dy) > Math.abs(dx)) {
             if (dy > 150) {
+                currswipe = true;
                 inprogress = true;
                 updateIndex(-1);
+                sleep(500).then(() => { inprogress = false; });
             } else if (dy < -150) {
+                currswipe = true;
                 inprogress = true;
                 updateIndex(1);
+                sleep(500).then(() => { inprogress = false; });
             }
         }
     }
@@ -75,7 +79,7 @@ function handleTouchEnd(evt) {
     evt.preventDefault();
     xi = null;
     yi = null;
-    inprogress = false;
+    currswipe = false;
 }
 
 document.addEventListener("touchstart", handleTouchStart, false);
