@@ -47,12 +47,14 @@ var xi = null;
 var yi = null;
 
 function handleTouchStart(evt) {
+    evt.preventDefault();
     xi = evt.touches[0].clientX;
     yi = evt.touches[0].clientY;
     console.log([xi, yi]);
 }
 
 function handleTouchMove(evt) {
+    evt.preventDefault();
     if (!inprogress && xi && yi) {
         var dx = evt.touches[0].clientX - xi;
         var dy = evt.touches[0].clientY - yi;
@@ -70,6 +72,7 @@ function handleTouchMove(evt) {
 }
 
 function handleTouchEnd(evt) {
+    evt.preventDefault();
     xi = null;
     yi = null;
     inprogress = false;
