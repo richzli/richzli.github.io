@@ -60,6 +60,8 @@ p strong {
 a {
     background-color: transparent;
     text-decoration: none;
+
+    color: var(--dark-purple);
 }
 
 /* #########
@@ -93,10 +95,6 @@ a {
     font-family: 'Lato', sans-serif;
     font-size: 30px;
     font-weight: bold;
-}
-
-a.ml-away {
-    color: var(--dark-purple);
 }
 
 /* ##########
