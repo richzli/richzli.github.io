@@ -44,14 +44,14 @@ nav a {
 
 .nav-logo {
     font-family: 'Raleway', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
 
     color: var(--nav-text-color);
 }
 
 .nav-item {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
 
     color: var(--nav-text-color);
 }

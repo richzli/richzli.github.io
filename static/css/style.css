@@ -5,7 +5,7 @@
 :root {
     --bg-color: #FAFAFA;
     --bg-color-dark: #F0F0F0;
-    --dark-purple: #900090;
+    --dark-purple: #AC91F7;
 
     scrollbar-track-color: transparent;
     scrollbar-width: none;
@@ -274,7 +274,22 @@ main.show {
 
 .project-img {
     box-shadow: 0 0 5px 3px #999;
-    margin: 0 10px;
+    margin: 0 5px 10px 5px;
+}
+
+.project-img.fit-width {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.project-img.fit-half-width {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.project-img.fit-height {
+    box-sizing: border-box;
+    height: 100%;
 }
 
 .project-icon-link {
