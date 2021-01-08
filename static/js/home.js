@@ -8,6 +8,7 @@ function sleep(ms) {
 }
 
 function updateIndex(delta) {
+    delta *= -1;
     texts.eq(index).fadeOut({duration: 250, queue: false});
     index += texts.length + delta; // delta is +120 when wheel is scrolled up, -120 when down
     index %= texts.length;

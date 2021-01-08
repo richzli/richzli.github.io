@@ -159,7 +159,9 @@ main.show {
 .container-double .column {
     width: 40%;
 
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .container-double .column:first-child {
@@ -284,7 +286,7 @@ main.show {
 
 .project-img.fit-half-width {
     box-sizing: border-box;
-    width: 50%;
+    width: 40%; /* not actually half bc padding :) */
 }
 
 .project-img.fit-height {
