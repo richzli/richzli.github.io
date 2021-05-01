@@ -8,7 +8,7 @@ $(function() {
         var evt = window.evt || e;
         var target = $(this).attr("href");
         evt.preventDefault();
-        $(".nav-curr").animate({bottom: "-=0.2rem"}, {duration: 200, queue: false});
+        $(".nav-curr").animate({bottom: "-=0.2rem"}, {duration: 100, queue: false});
         if ($(evt.target).parent().is($(".nav-item"))) {
             $(evt.target).parent().addClass("hovered");
         }
@@ -21,7 +21,7 @@ $(function() {
 
 $(window).bind("pageshow", function(event) {
     if (event.originalEvent.persisted) { // if back button
-        $(".nav-curr").animate({bottom: "+=0.2rem"}, {duration: 200, queue: false});
+        $(".nav-curr").animate({bottom: "+=0.2rem"}, {duration: 100, queue: false});
         $("main.content").addClass("show");
         $(".nav-item:not(.nav-curr)").removeClass("hovered");
     }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     
-    <title>richz.li - blog</title>
+    <title>richz.li - sentivents</title>
     
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@800&family=Roboto:wght@300;700&family=Roboto+Slab&family=Open+Sans:wght@300&display=swap"> 
@@ -33,7 +33,7 @@
                     
                 
                     
-                        <li class="nav-item nav-curr">blog</li>
+                        <li class="nav-item"><a class="internal-link" href="/blog/">blog</a></li>
                     
                 
                     
@@ -47,18 +47,69 @@
     
     <main class="content">
         
-<div class="blog-container">
-    <div class="blog-content">
-        <div class="blog-post">
-            <h2>a blog will be here in the near future</h2>
-            <div style="height: 8px;"></div> <!-- very ugly -->
-            <h3>may 1, 2021</h3><br>
 
-            <p>hmmmm...</p>
+<div class="section">
+    <div class="container container-single">
+        <h1>sentivents 
+<a href="https://github.com/cyu0003/sentivents" target="_blank"><img class="project-icon-link" src="/static/resources/icons/github.svg" height="30" /></a>
+ 
+<a href="https://github.com/richzli/sentivents-server" target="_blank"><img class="project-icon-link" src="/static/resources/icons/github.svg" height="30" /></a>
+</h1> 
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-single">
+        <div class="column-container">
+            <p>Mood tracker app leveraging a sentiment analysis ML model.</p>
+
         </div>
     </div>
-    <div class="blog-sidebar">
-        <p>topics</p>
+</div>
+
+<div class="section">
+    <div class="container container-double">
+        <div class="column">
+            <div class="column-container">
+                <p>This is a <strong>React Native</strong> mobile application with a <strong>Python</strong> backend.</p><br>
+
+<p>This project was created for the Boilermake VIII hackathon with a group of three others. We wanted to utilize MIT's <strong>DeepMoji</strong>, an interesting machine learning model that recognizes emotion in text by using emojis.</p><br>
+
+<p>A slight problem was that this model only had Python implementations, so including it directly in the app was infeasable. We ended up deciding separating this project into two parts, the app, and a simple HTTP server to service the requests.</p>
+
+            </div>
+        </div>
+        <div class="column">
+            <div class="column-container">
+                
+<img class="project-img fit-half-width" src="/static/resources/project/sentivents-5.PNG" />
+
+<img class="project-img fit-half-width" src="/static/resources/project/sentivents-2.PNG" />
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-double">
+        <div class="column">
+            <div class="column-container">
+                
+<img class="project-img fit-half-width" src="/static/resources/project/sentivents-3.PNG" />
+
+<img class="project-img fit-half-width" src="/static/resources/project/sentivents-4.PNG" />
+
+            </div>
+        </div>
+        <div class="column">
+            <div class="column-container">
+                <p>Given my expertise in Python, I was given the task of implementing the backend. One problem I ended up encountering was that the provided DeepMoji implementation used an old version of <strong>PyTorch</strong>, causing it to break completely. It took a surprising amount of time to find references online and isolate the problem.</p><br>
+
+<p>After I fixed that, I set up a simple API with Python's <strong>http.server</strong> on a Google Cloud Compute instance. This allowed the rest of the team to start implementing functionality in the app.</p>
+
+            </div>
+        </div>
     </div>
 </div>
 
