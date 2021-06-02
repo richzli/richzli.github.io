@@ -22,24 +22,24 @@ body {
 }
 
 h1 {
-    font-family: 'Roboto Slab', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
 
 h2 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 30px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 h3 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'TW Cen MT', sans-serif;
     font-size: 16px;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
     font-size: 20px;
     font-weight: 300;
     margin-bottom: 0.4rem;
@@ -92,7 +92,7 @@ a {
 }
 
 .ml-text-secondary {
-    font-family: 'Lato', sans-serif;
+    font-family: 'TW Cen MT', sans-serif;
     font-size: 30px;
     font-weight: bold;
 }
@@ -175,7 +175,7 @@ main.show {
 }
 
 .column .column-link {
-    font-family: "Roboto Slab", serif;
+    font-family: "Raleway", serif;
     font-size: 18px;
     color: var(--dark-purple);
 }
@@ -209,7 +209,7 @@ main.show {
 }
 
 .icon-large .icon-text {
-    font-family: "Roboto", sans-serif;
+    font-family: "Red Hat Text", sans-serif;
     font-size: 10px;
     margin-top: 0.5rem;
 }
@@ -270,7 +270,7 @@ main.show {
     right: 0;
 
     color: white;
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "Raleway", sans-serif;
     text-align: right;
 }
 
@@ -340,7 +340,7 @@ footer {
 }
 
 .footer-text {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Red Hat Text', sans-serif;
     font-size: 12px;
     font-weight: 300;
     margin-bottom: 0;

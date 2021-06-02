@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'TW Cen MT';
+    src: url('TCM.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'TW Cen MT';
+    src: url('TCB.TTF') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'TW Cen MT';
+    src: url('TCMI.TTF') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'TW Cen MT';
+    src: url('TCBI.TTF') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Red Hat Text';
+    src: url('RedHatText-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Red Hat Text';
+    src: url('RedHatText-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Red Hat Text';
+    src: url('RedHatText-Italic.ttf') format('truetype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Red Hat Text';
+    src: url('RedHatText-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
