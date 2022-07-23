@@ -1,12 +1,15 @@
+/*
 var index = 0;
 var texts = $(".scroll-text");
-var inprogress = false;
 texts.eq(index).show();
+*/
+var inprogress = false;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+/*
 function updateIndex(delta) {
     delta *= -1;
     texts.eq(index).fadeOut({duration: 250, queue: false});
@@ -14,6 +17,7 @@ function updateIndex(delta) {
     index %= texts.length;
     texts.eq(index).fadeIn({duration: 500, queue: false});
 }
+*/
 
 // update link on scroll //
 
@@ -23,14 +27,21 @@ function displayWheel(e){
         var delta = evt.detail ? evt.detail*(-120) : evt.wheelDelta; // check for detail first so Opera uses that instead of wheelDelta
         delta = Math.floor(delta/Math.abs(delta));
         
+        /*
         inprogress = true;
         updateIndex(delta);
         sleep(500).then(() => { inprogress = false; });
+        */
 
         if (evt.preventDefault) //disable default wheel action of scrolling page
             evt.preventDefault();
-        else
-            return false;
+        
+        if (delta < 0) {
+            $("main.content").removeClass("show");
+            setTimeout(function() {
+                window.location.href = "/about";
+            }, 200);
+        }
     }
 }
 
@@ -62,15 +73,23 @@ function handleTouchMove(evt) {
 
         if (Math.abs(dy) > Math.abs(dx)) {
             if (dy > 150) {
+                /*
                 currswipe = true;
                 inprogress = true;
                 updateIndex(-1);
                 sleep(500).then(() => { inprogress = false; });
+                */
             } else if (dy < -150) {
                 currswipe = true;
+                $("main.content").removeClass("show");
+                setTimeout(function() {
+                    window.location.href = "/about";
+                }, 200);
+                /*
                 inprogress = true;
                 updateIndex(1);
                 sleep(500).then(() => { inprogress = false; });
+                */
             }
         }
     }
@@ -90,6 +109,7 @@ document.addEventListener("touchcancel", handleTouchEnd, false);
 
 // bouncing text //
 
+/*
 const dist = '5px';
 async function bounceText() {
     texts.animate({marginTop: '-=' + dist}, {duration: 300})
@@ -102,3 +122,4 @@ async function bounceText() {
 }
 
 bounceText();
+*/
