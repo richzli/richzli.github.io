@@ -61,6 +61,12 @@ var currswipe = false;
 
 function handleTouchStart(evt) {
     evt.preventDefault();
+
+    $("main.content").removeClass("show");
+    setTimeout(function() {
+        window.location.href = "/about";
+    }, 200);
+
     xi = evt.touches[0].clientX;
     yi = evt.touches[0].clientY;
 }

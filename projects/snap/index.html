@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    
+    <title>richz.li - snap</title>
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@800&family=Roboto:wght@300;700&family=Roboto+Slab&family=Open+Sans:wght@300&display=swap">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/static/js/link-animate.js"></script>
+    
+</head>
+
+<body>
+    
+        <header>
+            <nav class="nav-top">
+                <li class="nav-logo"><a href="/">richz.li</a></li>
+                
+                    
+                        <li class="nav-item"><a class="internal-link" href="/about/">about</a></li>
+                    
+                
+                    
+                        <li class="nav-item"><a class="internal-link" href="/projects/">projects</a></li>
+                    
+                
+                    
+                        <li class="nav-item"><a class="internal-link" href="/contact/">contact</a></li>
+                    
+                
+            </nav>
+        </header>    
+        <div class="padding-header"></div>
+    
+    
+    <main class="content">
+        
+
+<div class="section">
+    <div class="container container-single">
+        <h1>snap 
+<a href="https://github.com/richzli/snap" target="_blank"><img class="project-icon-link" src="/static/resources/icons/github.svg" height="30" /></a>
+ 
+<a href="https://richzli.github.io/snap" target="_blank"><img class="project-icon-link" src="/static/resources/icons/link.svg" height="30" /></a>
+</h1> 
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-single">
+        <div class="column-container">
+            <p>Disintegrate images for fun!</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-double">
+        <div class="column">
+            <div class="column-container">
+                <p>There's a particular Discord emote I really enjoy using (shown on the right). It's got this feeling of sadness and angst that's just so incredibly powerful and soul-touching...</p><br>
+
+<p>Anyways, I went searching for a tool that would apply a similar effect to my own images, to no avail. So I made one myself.</p>
+
+            </div>
+        </div>
+        <div class="column">
+            <div class="column-container">
+                
+<img class="project-img fit-half-width" src="/static/resources/project/boohooa.gif" />
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-single">
+        <div class="column-container">
+            <p>It's coded in <strong>Javascript</strong> with a little help from <strong>gif.js</strong>, a GIF encoder.</p><br>
+
+<p>My original implementation was incredibly slow, and it turned out that I was re-loading the image data every frame, which completely destroyed performance. But after a few quick tweaks and parameter tunings, it was good to go.</p><br>
+
+<p>Not much else to say other than to try it out and enjoy the show!</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-single">
+        <div class="column-container">
+            
+<img class="project-img fit-width" src="/static/resources/project/snap-demo.gif" />
+
+        </div>
+    </div>
+</div>
+
+        
+            <footer>
+                <div class="footer-container">
+                    <span class="footer-text">
+                        © richard li<span id="year"></span>. all rights reserved.
+                    </span>
+                    <script type="text/javascript">
+                        $("#year").html(", " + new Date().getFullYear());
+                    </script>
+
+                    <div class="footer-link">
+                        <a href="https://github.com/richzli" target="_blank">
+                            <img src="/static/resources/icons/github.svg" height="20" />
+                        </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href="https://codeforces.com/profile/richzli" target="_blank">
+                            <img src="/static/resources/icons/codeforces.svg" height="20" />
+                        </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href="https://www.linkedin.com/in/richzli/" target="_blank">
+                            <img src="/static/resources/icons/linkedin.svg" height="20" />
+                        </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href="https://www.youtube.com/channel/UChVIUpuMHoCJDz5eZEhgqJw" target="_blank">
+                            <img src="/static/resources/icons/youtube.svg" height="20" />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        
+    </main>
+</body>
+
+</html>

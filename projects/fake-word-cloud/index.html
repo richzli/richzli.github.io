@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    
+    <title>richz.li - fake-word-cloud</title>
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@800&family=Roboto:wght@300;700&family=Roboto+Slab&family=Open+Sans:wght@300&display=swap">
+    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/static/js/link-animate.js"></script>
+    
+</head>
+
+<body>
+    
+        <header>
+            <nav class="nav-top">
+                <li class="nav-logo"><a href="/">richz.li</a></li>
+                
+                    
+                        <li class="nav-item"><a class="internal-link" href="/about/">about</a></li>
+                    
+                
+                    
+                        <li class="nav-item"><a class="internal-link" href="/projects/">projects</a></li>
+                    
+                
+                    
+                        <li class="nav-item"><a class="internal-link" href="/contact/">contact</a></li>
+                    
+                
+            </nav>
+        </header>    
+        <div class="padding-header"></div>
+    
+    
+    <main class="content">
+        
+
+<div class="section">
+    <div class="container container-single">
+        <h1>fake word cloud 
+<a href="https://github.com/richzli/fake-word-cloud" target="_blank"><img class="project-icon-link" src="/static/resources/icons/github.svg" height="30" /></a>
+</h1> 
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-single">
+        <div class="column-container">
+            <p>An animated word cloud made up of not-so-real words.</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-double">
+        <div class="column">
+            <div class="column-container">
+                <p>The initial scope of the project was simple: figure out how to generate fake words.</p><br>
+
+<p>I came up with a simple idea using Markov chains: take a random distribution of words, and predict the next letter based on the previous two. So I took to Wikipedia, scraping 5000 pages for words over five letters wrong.</p><br>
+
+<p>The results weren't perfect, but the words were pretty good considering the relatively short implementation time.</p>
+
+            </div>
+        </div>
+        <div class="column">
+            <div class="column-container">
+                
+<img class="project-img fit-width" src="/static/resources/project/words.png" />
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-single">
+        <div class="column-container">
+            <p>But what if it were <em>animated</em>? I mean, I've always wanted to code a physics engine...</p><br>
+
+<p>It turned out that the most challenging part of the project was learning how to finagle <strong>OpenGL</strong> itself. In a bid to fix a pesky bug, I studied practically the entire rendering pipeline, only to discover that the error lay in a type inference issue (thank you <a rel="noopener" target="_blank" href="https://github.com/rileyborgard">Riley</a> for the debugging session).</p><br>
+
+<p>Lesson learned: next time, use C++.</p>
+
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container container-single">
+        <div class="column-container">
+            
+<img class="project-img fit-width" src="/static/resources/project/demo.gif" />
+
+        </div>
+    </div>
+</div>
+
+        
+            <footer>
+                <div class="footer-container">
+                    <span class="footer-text">
+                        © richard li<span id="year"></span>. all rights reserved.
+                    </span>
+                    <script type="text/javascript">
+                        $("#year").html(", " + new Date().getFullYear());
+                    </script>
+
+                    <div class="footer-link">
+                        <a href="https://github.com/richzli" target="_blank">
+                            <img src="/static/resources/icons/github.svg" height="20" />
+                        </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href="https://codeforces.com/profile/richzli" target="_blank">
+                            <img src="/static/resources/icons/codeforces.svg" height="20" />
+                        </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href="https://www.linkedin.com/in/richzli/" target="_blank">
+                            <img src="/static/resources/icons/linkedin.svg" height="20" />
+                        </a>
+                    </div>
+
+                    <div class="footer-link">
+                        <a href="https://www.youtube.com/channel/UChVIUpuMHoCJDz5eZEhgqJw" target="_blank">
+                            <img src="/static/resources/icons/youtube.svg" height="20" />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        
+    </main>
+</body>
+
+</html>
