@@ -1,50 +1,6 @@
-<html>
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-
-    
-    <title>richz.li - about</title>
-    
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@800&family=Roboto:wght@300;700&family=Roboto+Slab&family=Open+Sans:wght@300&display=swap">
-    <link rel="stylesheet" type="text/css" href="/static/css/fonts.css">
-
-    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/nav.css">
-    
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="/static/js/link-animate.js"></script>
-    
-</head>
-
-<body>
-    
-        <header>
-            <nav class="nav-top">
-                <li class="nav-logo"><a href="/">richz.li</a></li>
-                
-                    
-                        <li class="nav-item nav-curr">about</li>
-                    
-                
-                    
-                        <li class="nav-item"><a class="internal-link" href="/projects/">projects</a></li>
-                    
-                
-                    
-                        <li class="nav-item"><a class="internal-link" href="/contact/">contact</a></li>
-                    
-                
-            </nav>
-        </header>    
-        <div class="padding-header"></div>
-    
-    
-    <main class="content">
-        
+{% block content %}
 <div class="section" id="whoami">
     <div class="container container-double">
         <div class="column">
@@ -57,7 +13,7 @@
                 i'm <strong>richard li</strong>, a grad student at purdue university studying <strong>computer science</strong>
             </p>
             <p>
-                i have a bachelor's (also from purdue) for computer science and mathematics
+                i have a bachelor's (also from purdue) in computer science and mathematics
             </p>
             <p>
                 i've been programming for about <strong><span id="coding-years"></span> years</strong> now, and my favorite languages are <strong>python</strong> and <strong>c++</strong>
@@ -66,7 +22,7 @@
                 $("#coding-years").html(new Date().getFullYear() - 2014);
             </script>
             <p>
-                i'm primarily interested in <strong>data structures/algorithms</strong>, <strong>compilers</strong>, <strong>systems programming</strong>, and <strong>cryptography</strong>
+                i'm primarily interested in <strong>data structures/algorithms</strong>, <strong>compilers</strong>, <strong>graphics</strong>, and <strong>cryptography</strong>
             </p>
             <p>
                 "never stop learning. there's always a form you don't know."
@@ -88,7 +44,7 @@
                     <strong>sde intern</strong> at amazon (again)
                 </p>
                 <span class="descriptor">
-                    I returned to Amazon EKS this summer, writing unit tests for an authentication webhook. The coolest thing about my project was that it was open source, which meant I had to adapt to a wholly new environment to deploy my code. During my time here, I gained a significant amount of experience in Kubernetes cluster management and internal systems, and in the process became a Kubernetes contributor! I'm grateful for the opportunity to be a part of this huge ecosystem.
+                    I returned to Amazon EKS this summer, developing a crucial testing framework for an authentication webhook. The coolest thing about my project was that it was open source, which meant I had to adapt to a wholly new environment to deploy my code. During my time here, I gained a significant amount of experience in Kubernetes cluster management and internal systems, and in the process became a Kubernetes contributor! I'm grateful for the opportunity to be a part of this huge ecosystem.
                 </span>
             </div>
             <div class="group">
@@ -164,91 +120,59 @@
         <div class="column icon-row-container">
             <div class="icon-row">
                 <div class="icon-large">
-                    <img src="/static/resources/icons/python.svg" title="Python" height="50" />
+                    <img src="{{ url_for('static', filename='resources/icons/python.svg') }}" title="Python" height="50" />
                     <div class="icon-text"><span>python</span></div>
                 </div>
                 <div class="icon-large">
-                    <img src="/static/resources/icons/java.svg" title="Java" height="50" />
+                    <img src="{{ url_for('static', filename='resources/icons/java.svg') }}" title="Java" height="50" />
                     <div class="icon-text"><span>java</span></div>
                 </div>
                 <div class="icon-large">
-                    <img src="/static/resources/icons/cplusplus.svg" title="C++" height="50" />
+                    <img src="{{ url_for('static', filename='resources/icons/cplusplus.svg') }}" title="C++" height="50" />
                     <div class="icon-text"><span>c++</span></div>
                 </div>
                 <div class="icon-large">
-                    <img src="/static/resources/icons/c.svg" title="C" height="50" />
+                    <img src="{{ url_for('static', filename='resources/icons/c.svg') }}" title="C" height="50" />
                     <div class="icon-text"><span>c</span></div>
                 </div>
             </div>
             <div class="icon-row">
                 <div class="icon-large">
-                    <img src="/static/resources/icons/kubernetes.svg" title="Kubernetes" height="50" />
-                    <div class="icon-text"><span>kubernetes</span></div>
-                </div>
-                <div class="icon-large">
-                    <img src="/static/resources/icons/go.svg" title="Go" height="50" />
+                    <img src="{{ url_for('static', filename='resources/icons/go.svg') }}" title="Go" height="50" />
                     <div class="icon-text"><span>go</span></div>
                 </div>
                 <div class="icon-large">
-                    <img src="/static/resources/icons/sqlite.svg" title="SQL" height="50" />
-                    <div class="icon-text"><span>sql</span></div>
+                    <img src="{{ url_for('static', filename='resources/icons/typescript.svg') }}" title="typescript" height="50" />
+                    <div class="icon-text"><span>typescript</span></div>
                 </div>
                 <div class="icon-large">
-                    <img src="/static/resources/icons/kotlin.svg" title="Kotlin" height="50" />
+                    <img src="{{ url_for('static', filename='resources/icons/kotlin.svg') }}" title="Kotlin" height="50" />
                     <div class="icon-text"><span>kotlin</span></div>
+                </div>
+                <div class="icon-large">
+                    <img src="{{ url_for('static', filename='resources/icons/opengl.svg') }}" title="OpenGL" height="50" />
+                    <div class="icon-text"><span>opengl</span></div>
                 </div>
             </div>
             <div class="icon-row">
                 <div class="icon-large">
-                    <img src="/static/resources/icons/unity.svg" title="Unity" height="50" />
+                    <img src="{{ url_for('static', filename='resources/icons/unity.svg') }}" title="Unity" height="50" />
                     <div class="icon-text"><span>unity</span></div>
                 </div>
                 <div class="icon-large">
-                    <img src="/static/resources/icons/mongodb.svg" title="MongoDB" height="50" />
+                    <img src="{{ url_for('static', filename='resources/icons/kubernetes.svg') }}" title="Kubernetes" height="50" />
+                    <div class="icon-text"><span>kubernetes</span></div>
+                </div>
+                <div class="icon-large">
+                    <img src="{{ url_for('static', filename='resources/icons/sqlite.svg') }}" title="SQL" height="50" />
+                    <div class="icon-text"><span>sql</span></div>
+                </div>
+                <div class="icon-large">
+                    <img src="{{ url_for('static', filename='resources/icons/mongodb.svg') }}" title="MongoDB" height="50" />
                     <div class="icon-text"><span>mongodb</span></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-        
-            <footer>
-                <div class="footer-container">
-                    <span class="footer-text">
-                        © richard li<span id="year"></span>. all rights reserved.
-                    </span>
-                    <script type="text/javascript">
-                        $("#year").html(", " + new Date().getFullYear());
-                    </script>
-
-                    <div class="footer-link">
-                        <a href="https://github.com/richzli" target="_blank">
-                            <img src="/static/resources/icons/github.svg" height="20" />
-                        </a>
-                    </div>
-
-                    <div class="footer-link">
-                        <a href="https://codeforces.com/profile/richzli" target="_blank">
-                            <img src="/static/resources/icons/codeforces.svg" height="20" />
-                        </a>
-                    </div>
-
-                    <div class="footer-link">
-                        <a href="https://www.linkedin.com/in/richzli/" target="_blank">
-                            <img src="/static/resources/icons/linkedin.svg" height="20" />
-                        </a>
-                    </div>
-
-                    <div class="footer-link">
-                        <a href="https://www.youtube.com/channel/UChVIUpuMHoCJDz5eZEhgqJw" target="_blank">
-                            <img src="/static/resources/icons/youtube.svg" height="20" />
-                        </a>
-                    </div>
-                </div>
-            </footer>
-        
-    </main>
-</body>
-
-</html>
+{% endblock %}
