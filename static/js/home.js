@@ -19,6 +19,13 @@ function updateIndex(delta) {
 }
 */
 
+function progress() {
+    $("main.content").removeClass("show");
+    setTimeout(function() {
+        window.location.href = "/about";
+    }, 200);
+}
+
 // update link on scroll //
 
 function displayWheel(e){
@@ -37,10 +44,7 @@ function displayWheel(e){
             evt.preventDefault();
         
         if (delta < 0) {
-            $("main.content").removeClass("show");
-            setTimeout(function() {
-                window.location.href = "/about";
-            }, 200);
+            progress();
         }
     }
 }
@@ -62,10 +66,7 @@ var currswipe = false;
 function handleTouchStart(evt) {
     evt.preventDefault();
 
-    $("main.content").removeClass("show");
-    setTimeout(function() {
-        window.location.href = "/about";
-    }, 200);
+    progress();
 
     xi = evt.touches[0].clientX;
     yi = evt.touches[0].clientY;
@@ -87,10 +88,7 @@ function handleTouchMove(evt) {
                 */
             } else if (dy < -150) {
                 currswipe = true;
-                $("main.content").removeClass("show");
-                setTimeout(function() {
-                    window.location.href = "/about";
-                }, 200);
+                progress();
                 /*
                 inprogress = true;
                 updateIndex(1);
@@ -112,6 +110,8 @@ document.addEventListener("touchstart", handleTouchStart, false);
 document.addEventListener("touchmove", handleTouchMove, false);
 document.addEventListener("touchend", handleTouchEnd, false);
 document.addEventListener("touchcancel", handleTouchEnd, false);
+
+setTimeout(progress, 2000);
 
 // bouncing text //
 
