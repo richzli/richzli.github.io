@@ -341,6 +341,10 @@ main.show {
 }
 
 @media (max-width: 800px) {
+    .card-container {
+        padding: 1rem 5%;
+    }
+    
     .card-holder {
         padding: 10px;
     }
