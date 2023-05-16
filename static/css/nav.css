@@ -56,6 +56,16 @@ nav a {
     color: var(--nav-text-color);
 }
 
+@media (max-width: 800px) {
+    .nav-logo {
+        font-size: 26px;
+    }
+
+    .nav-item {
+        font-size: 26px;
+    }
+}
+
 nav .nav-item:not(.nav-curr), nav .nav-item:not(.nav-curr).not-hovered {
     position: relative;
     bottom: 0rem;

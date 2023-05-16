@@ -64,6 +64,32 @@ a {
     color: var(--dark-purple);
 }
 
+@media (max-width: 800px) {
+    :root {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 10px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .descriptor {
+        font-size: 14px;
+    }
+}
+
 /* #########
     middle-large things
    ######### */
@@ -140,7 +166,7 @@ main.show {
 }
 
 .container {
-    margin: 0 15%;
+    margin: 0 10%;
 }
 
 .container-single {
@@ -148,6 +174,10 @@ main.show {
     padding: 1rem 0;
 
     text-align: center;
+}
+
+.container-double {
+    display: flex;
 }
 
 .container.no-margin {
@@ -160,10 +190,30 @@ main.show {
 
 .container-double .column {
     width: 40%;
+    margin: 0 5%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+@media (max-width: 800px) {
+    .container {
+        margin: 0 5%;
+    }
+
+    .container-double {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column {
+        padding: 1.5em;
+    }
+
+    .container-double .column {
+        width: 80%;
+        margin: 0 5%;
+    }
 }
 
 .container-double .column:first-child {
@@ -174,6 +224,20 @@ main.show {
 .container-double .column:last-child {
     float: right;
     text-align: left;
+}
+
+@media (min-width: 801px) {
+    .section:nth-child(even) .container-double .column.section-title {
+        order: 2;
+        float: right;
+        text-align: left;
+    }
+
+    .section:nth-child(even) .container-double .column.section-content {
+        order: 1;
+        float: left;
+        text-align: right;
+    }
 }
 
 .column .column-link {
@@ -274,6 +338,31 @@ main.show {
     color: white;
     font-family: "Raleway", sans-serif;
     text-align: right;
+}
+
+@media (max-width: 800px) {
+    .card-holder {
+        padding: 10px;
+    }
+
+    .card {
+        width: 120px;
+        height: 120px;
+        background-size: 120px 120px;
+    
+        border-radius: 5px;
+    
+        transition: all 0.2s ease;
+    }
+
+    .card:hover {
+        width: 130px;
+        height: 130px;
+    
+        margin: -5px;
+    
+        background-size: 130px 130px;
+    }
 }
 
 .project-img {
