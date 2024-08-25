@@ -64,6 +64,12 @@ a {
     color: var(--dark-purple);
 }
 
+br {
+    display: block;
+    content: "";
+    margin-top: 0.5em;
+}
+
 @media (max-width: 800px) {
     :root {
         font-size: 14px;
@@ -170,7 +176,7 @@ main.show {
 }
 
 .container-single {
-    margin: 0 25%;
+    margin: 0 20%;
     padding: 1rem 0;
 
     text-align: center;
@@ -240,7 +246,7 @@ main.show {
     }
 }
 
-.column .column-link {
+.big-link {
     font-family: "Raleway", serif;
     font-size: 18px;
     color: var(--dark-purple);
@@ -248,6 +254,72 @@ main.show {
 
 .group {
     margin-bottom: 1rem;
+}
+
+/* ##########
+    timeline
+   ########## */
+
+.timeline {
+    overflow: hidden;
+    align-items: center;
+}
+
+.timeline-title {
+    padding-top: 3rem;
+}
+
+.timeline-title .big-link {
+    display: block;
+}
+
+.timeline-content {
+    padding: 1rem 0;
+
+    float: left;
+
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, black 0px, black 5px, rgba(0, 0, 0, 0) 5px);
+    background-size: 10px 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.timeline-group {
+    width: 100%;
+    display: block;
+    float: left;
+}
+
+.timeline-header {
+    width: 100%;
+    background-color: var(--bg-color);
+    display: block;
+
+    float: center;
+    clear: both;
+
+    text-align: center;
+
+    margin-bottom: 1rem;
+}
+
+.timeline-content .timeline-item {
+    width: 45%;
+    display: block;
+
+    float: left;
+    clear: left;
+
+    text-align: right;
+
+    margin-bottom: 1rem;
+}
+
+.timeline-content .timeline-item:nth-of-type(even) {
+    float: right;
+    clear: right;
+
+    text-align: left;
 }
 
 /* ##########
@@ -326,21 +398,36 @@ main.show {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    position: relative;
-}
 
-.card-title {
-    margin: 15%;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
-    color: white;
-    font-family: "Raleway", sans-serif;
+    padding: 15%;
     text-align: right;
 }
 
+.card-title {
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-size: 20px;
+
+    display: block;
+}
+
+.card-tags {
+    color: white;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 16px;
+
+    display: block;
+}
+
 @media (max-width: 800px) {
+    .card-container {
+        padding: 1rem 5%;
+    }
+
     .card-holder {
         padding: 10px;
     }
@@ -362,6 +449,22 @@ main.show {
         margin: -5px;
     
         background-size: 130px 130px;
+    }
+
+    .card-title {
+        color: white;
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+    
+        display: block;
+    }
+    
+    .card-tags {
+        color: white;
+        font-family: 'Red Hat Text', sans-serif;
+        font-size: 12px;
+    
+        display: block;
     }
 }
 
