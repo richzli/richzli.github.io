@@ -279,7 +279,7 @@ main.show {
     float: left;
 
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0px, black 0px, black 5px, rgba(0, 0, 0, 0) 5px);
-    background-size: 10px 100%;
+    background-size: 5px 100%;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -427,7 +427,7 @@ main.show {
     .card-container {
         padding: 1rem 5%;
     }
-    
+
     .card-holder {
         padding: 10px;
     }
